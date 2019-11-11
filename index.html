@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Cash Machine</title>
+</head>
+<body>
+    <h1>Basic Cash Machine</h1>
+    <form >
+        <table style="width:80%">
+
+            <tr>
+                <th> <label for="balanceRead">Balance:</label> </th>
+                <th> <input type="number" id="balanceRead" readonly> </th>
+
+                <th> <label for="pinInput">Enter your pin:</label> </th>
+                <th> <input type="password" id="pinInput" inputmode="numeric" minlength="4" maxlength="4"> </th>
+            </tr>
+            <tr>
+                <th><label for="moneyOut">Please select the amount of money to withdraw:</label>  </th>    <!-- list for options of input -->
+                <datalist id="notes">
+                    <option value="10"></option>
+                    <option value="20"></option>
+                    <option value="30"></option>
+                    <option value="40"></option>
+                    <option value="50"></option>
+                    <option value="100"></option>
+                </datalist>
+
+                <th><input class = "moneyOut" list = "notes" type="number" id="moneyOut"></th>
+            </tr>   
+            <tr>
+                <th><button id="withdrawBtn">Withdraw</button> </th>
+            </tr>
+        </table>
+
+        
+
+        </form>
+
+        <div id = "modal">
+            <div id = "modalCont">
+                <!-- to be filled with JS, when needed -->
+                <a href="#" id = "okBtn">OK</a>
+            </div>
+        </div>
+    
+
+    <script src = "cashMachine.js"> </script>
+</body>
+</html>
